@@ -122,7 +122,7 @@ nav.scrolled{box-shadow:0 2px 24px rgba(26,23,20,0.08)}
 .filter-pill:hover{border-color:var(--burg);color:var(--burg)}
 .filter-pill.active{background:var(--burg);border-color:var(--burg);color:var(--white)}
 
-.wine-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.wine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 
 .wine-card{background:var(--white);border:1px solid var(--border2);border-radius:2px;overflow:hidden;cursor:pointer;transition:transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
 .wine-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(26,23,20,0.1)}
@@ -266,7 +266,7 @@ footer{background:var(--charcoal);padding:72px 0 40px}
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:1100px){
-  .wine-grid{grid-template-columns:repeat(3,1fr)}
+  .wine-grid{grid-template-columns:repeat(2,1fr)}
   .footer-top{grid-template-columns:1fr 1fr;gap:40px}
 }
 @media(max-width:900px){
@@ -441,22 +441,72 @@ footer{background:var(--charcoal);padding:72px 0 40px}
       <button class="filter-pill" onclick="filterWines('red',this)">Red</button>
       <button class="filter-pill" onclick="filterWines('white',this)">White</button>
       <button class="filter-pill" onclick="filterWines('rose',this)">Rosé</button>
-      <button class="filter-pill" onclick="filterWines('natural',this)">Natural</button>
       <button class="filter-pill" onclick="filterWines('sparkling',this)">Sparkling</button>
     </div>
 
     <div class="wine-grid" id="wineGrid">
 
-      <!-- RED -->
+      <!-- 1. Maysara Pinot Gris -->
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="white">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1560508180-03f285f67ded?w=500&h=600&q=80&fit=crop" alt="Maysara Pinot Gris">
+          <span class="wine-type-badge badge-white">White</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">McMinnville, Oregon · 2023</div>
+          <div class="wine-card-name">Maysara Pinot Gris</div>
+          <p class="wine-card-note">Biodynamic and estate-grown. Stone fruit, honey, and a rich textural finish. Oregon at its finest.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>21</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2. Gunderloch Riesling Kabinett Jean-Baptiste 2020 -->
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="white">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1568213214202-e59b4961a5b2?w=500&h=600&q=80&fit=crop" alt="Gunderloch Riesling Kabinett">
+          <span class="wine-type-badge badge-white">White</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Nahe, Germany · 2020</div>
+          <div class="wine-card-name">Gunderloch Riesling Kabinett Jean-Baptiste</div>
+          <p class="wine-card-note">Off-dry German Riesling with vibrant acidity and notes of peach, apricot, and slate. Elegant and precise.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>23</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 3. Tres Sabores Por Que No 2021 -->
       <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="red">
         <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=500&h=400&q=80&fit=crop" alt="Borsao Garnacha">
+          <img src="https://cdn.shopify.com/s/files/1/0618/3872/1197/files/7794503647405.png?v=1762874945" alt="Tres Sabores Por Que No 2021" onerror="this.src='https://images.unsplash.com/photo-1474722883778-792e7fb302b3?w=500&h=600&q=80&fit=crop'">
           <span class="wine-type-badge badge-red">Red</span>
         </div>
         <div class="wine-card-body">
-          <div class="wine-card-region">Aragon, Spain · 2022</div>
-          <div class="wine-card-name">Borsao Garnacha</div>
-          <p class="wine-card-note">Bold cherry and raspberry fruit with a smooth, velvety finish. A perfect entry point into Spanish reds.</p>
+          <div class="wine-card-region">Rutherford, California · 2021</div>
+          <div class="wine-card-name">Tres Sabores Por Que No</div>
+          <p class="wine-card-note">A bold, expressive California blend. Dark cherry, warm spice, and earth — complex and unforgettable.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>33</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 4. Le Monde Pinot Grigio -->
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="white">
+        <div class="wine-card-img">
+          <img src="https://www.winedispensary.com/cdn/shop/files/LeMondeBianchiPinotGrigio.png?v=1727383354" alt="Le Monde Pinot Grigio" onerror="this.src='https://images.unsplash.com/photo-1535141192574-5f33c4c43cef?w=500&h=600&q=80&fit=crop'">
+          <span class="wine-type-badge badge-white">White</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Friuli, Italy</div>
+          <div class="wine-card-name">Le Monde Pinot Grigio</div>
+          <p class="wine-card-note">Crisp and clean from northeast Italy. Fresh pear, citrus zest, and a long mineral finish. Effortlessly drinkable.</p>
           <div class="wine-card-footer">
             <div class="wine-card-price"><sup>$</sup>18</div>
             <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
@@ -464,181 +514,35 @@ footer{background:var(--charcoal);padding:72px 0 40px}
         </div>
       </a>
 
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="red">
-        <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1474722883778-792e7fb302b3?w=500&h=400&q=80&fit=crop" alt="Zuccardi Malbec">
-          <span class="wine-type-badge badge-red">Red</span>
-        </div>
-        <div class="wine-card-body">
-          <div class="wine-card-region">Mendoza, Argentina · 2021</div>
-          <div class="wine-card-name">Zuccardi Valle Malbec</div>
-          <p class="wine-card-note">Full-bodied with dark plum, violet, and a hint of cocoa. One of Argentina's finest expressions.</p>
-          <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>28</div>
-            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="red">
-        <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500&h=400&q=80&fit=crop" alt="Cannonball Cabernet">
-          <span class="wine-type-badge badge-red">Red</span>
-        </div>
-        <div class="wine-card-body">
-          <div class="wine-card-region">Sonoma County, CA · 2022</div>
-          <div class="wine-card-name">Cannonball Cabernet</div>
-          <p class="wine-card-note">Rich blackberry, cassis, and toasted oak. Big, bold, and perfectly balanced for steak nights.</p>
-          <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>22</div>
-            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <!-- WHITE -->
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="white">
-        <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1560508180-03f285f67ded?w=500&h=400&q=80&fit=crop" alt="Santa Margherita Pinot Grigio">
-          <span class="wine-type-badge badge-white">White</span>
-        </div>
-        <div class="wine-card-body">
-          <div class="wine-card-region">Alto Adige, Italy · 2023</div>
-          <div class="wine-card-name">Santa Margherita Pinot Grigio</div>
-          <p class="wine-card-note">Crisp, refreshing, and light golden in color. The definitive gateway wine — effortlessly elegant.</p>
-          <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>22</div>
-            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="white">
-        <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1535141192574-5f33c4c43cef?w=500&h=400&q=80&fit=crop" alt="Kim Crawford Sauvignon Blanc">
-          <span class="wine-type-badge badge-white">White</span>
-        </div>
-        <div class="wine-card-body">
-          <div class="wine-card-region">Marlborough, New Zealand · 2023</div>
-          <div class="wine-card-name">Kim Crawford Sauvignon Blanc</div>
-          <p class="wine-card-note">Vibrant citrus, passionfruit, and fresh cut grass. A crowd-pleaser that punches above its price.</p>
-          <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>18</div>
-            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="white">
-        <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1568213214202-e59b4961a5b2?w=500&h=400&q=80&fit=crop" alt="Dönnhoff Riesling">
-          <span class="wine-type-badge badge-white">White</span>
-        </div>
-        <div class="wine-card-body">
-          <div class="wine-card-region">Nahe, Germany · 2022</div>
-          <div class="wine-card-name">Dönnhoff Riesling</div>
-          <p class="wine-card-note">Off-dry with gorgeous minerality, apricot, and peach. Germany's most expressive Riesling house.</p>
-          <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>26</div>
-            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <!-- ROSÉ -->
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="rose">
-        <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=400&q=80&fit=crop" alt="Whispering Angel Rosé">
-          <span class="wine-type-badge badge-rose">Rosé</span>
-        </div>
-        <div class="wine-card-body">
-          <div class="wine-card-region">Provence, France · 2023</div>
-          <div class="wine-card-name">Whispering Angel Rosé</div>
-          <p class="wine-card-note">The gold standard of Provençal rosé. Pale blush, silky peach and cream, impossibly smooth finish.</p>
-          <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>34</div>
-            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="rose">
-        <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1491553895291-0be8496d674b?w=500&h=400&q=80&fit=crop" alt="La Vieille Ferme Rosé">
-          <span class="wine-type-badge badge-rose">Rosé</span>
-        </div>
-        <div class="wine-card-body">
-          <div class="wine-card-region">Luberon, France · 2023</div>
-          <div class="wine-card-name">La Vieille Ferme Rosé</div>
-          <p class="wine-card-note">Fresh strawberry and floral notes from the south of France. Everyday luxury at an accessible price.</p>
-          <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>14</div>
-            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <!-- NATURAL -->
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="natural">
-        <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=500&h=400&q=80&fit=crop" alt="Lioco Indica Red">
-          <span class="wine-type-badge badge-natural">Natural</span>
-        </div>
-        <div class="wine-card-body">
-          <div class="wine-card-region">Mendocino, CA · 2022</div>
-          <div class="wine-card-name">Lioco Indica Red</div>
-          <p class="wine-card-note">Minimal intervention, maximum soul. Wild-fermented, unfiltered, and pulsing with life. A must.</p>
-          <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>32</div>
-            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="natural">
-        <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=500&h=400&q=80&fit=crop" alt="Domaine Fond Croze">
-          <span class="wine-type-badge badge-natural">Natural</span>
-        </div>
-        <div class="wine-card-body">
-          <div class="wine-card-region">Rhône Valley, France · 2022</div>
-          <div class="wine-card-name">Domaine Fond Croze</div>
-          <p class="wine-card-note">Biodynamic farming, hand-harvested, unfiltered. Earthy, complex, and beautifully alive in the glass.</p>
-          <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>28</div>
-            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <!-- SPARKLING -->
+      <!-- 5. Maysara Sparkling Pinot Noir -->
       <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="sparkling">
         <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?w=500&h=400&q=80&fit=crop" alt="Mionetto Prosecco">
+          <img src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?w=500&h=600&q=80&fit=crop" alt="Maysara Sparkling Pinot Noir">
           <span class="wine-type-badge badge-sparkling">Sparkling</span>
         </div>
         <div class="wine-card-body">
-          <div class="wine-card-region">Veneto, Italy · NV</div>
-          <div class="wine-card-name">Mionetto Prosecco DOC</div>
-          <p class="wine-card-note">Light, effervescent, and perfectly dry. Celebrate everything — or nothing. Either works just fine.</p>
+          <div class="wine-card-region">McMinnville, Oregon · NV</div>
+          <div class="wine-card-name">Maysara Sparkling Pinot Noir</div>
+          <p class="wine-card-note">Biodynamic bubbles done right. Red fruit, fine persistent mousse, and a festive finish. Celebrate something.</p>
           <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>18</div>
+            <div class="wine-card-price"><sup>$</sup>39</div>
             <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
           </div>
         </div>
       </a>
 
-      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="sparkling">
+      <!-- 6. Nomad Rose -->
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="rose">
         <div class="wine-card-img">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&q=80&fit=crop" alt="Segura Viudas Cava">
-          <span class="wine-type-badge badge-sparkling">Sparkling</span>
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=600&q=80&fit=crop" alt="Nomad Rose">
+          <span class="wine-type-badge badge-rose">Rosé</span>
         </div>
         <div class="wine-card-body">
-          <div class="wine-card-region">Penedès, Spain · NV</div>
-          <div class="wine-card-name">Segura Viudas Cava Brut</div>
-          <p class="wine-card-note">Crisp green apple, toasted almond, and fine persistent bubbles. Spain's answer to Champagne.</p>
+          <div class="wine-card-region">Columbia Valley, Washington · 2024</div>
+          <div class="wine-card-name">Nomad Rosé</div>
+          <p class="wine-card-note">Fresh watermelon, strawberry, and citrus from Washington's Columbia Valley. Bright, dry, and endlessly sessionable.</p>
           <div class="wine-card-footer">
-            <div class="wine-card-price"><sup>$</sup>14</div>
+            <div class="wine-card-price"><sup>$</sup>21</div>
             <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
           </div>
         </div>
