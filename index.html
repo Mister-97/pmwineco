@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM Wine Lounge — Clean & Exceptional Wine for All Palates</title>
+<meta name="description" content="Black-owned. Curated. For a new generation. Discover clean, minimal-intervention wines from around the world — plus the exclusive PM Collection.">
+<meta property="og:title" content="PM Wine Lounge — Clean & Exceptional Wine for All Palates">
+<meta property="og:description" content="Black-owned. Curated. For a new generation of wine lovers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pmwineco.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF7F0;
+  --cream2:#F2EAE0;
+  --cream3:#E8DDD0;
+  --burg:#7A1C28;
+  --burg2:#5E1520;
+  --burg3:#9B2335;
+  --burg-light:rgba(122,28,40,0.07);
+  --charcoal:#1A1714;
+  --text:#2C2825;
+  --muted:#7A6E65;
+  --gold:#B89A5C;
+  --gold2:#D4B87A;
+  --gold-light:rgba(184,154,92,0.12);
+  --border:#DDD4C6;
+  --border2:#EDE5DA;
+  --white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden}
+
+/* ─── NAV ─── */
+nav{position:sticky;top:0;z-index:300;background:var(--cream);border-bottom:1px solid var(--border2);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 24px rgba(26,23,20,0.08)}
+.nav-inner{max-width:1360px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;gap:40px}
+.nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.nav-logo img{height:50px;width:auto}
+.nav-links{display:flex;gap:2px;list-style:none;margin-left:auto}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.04em;padding:7px 14px;border-radius:6px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--charcoal);background:var(--cream2)}
+.nav-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.nav-insta{display:flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.05em;transition:color .2s}
+.nav-insta:hover{color:var(--burg)}
+.nav-insta svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.btn-nav{background:var(--burg);color:var(--white);text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:9px 22px;border-radius:2px;transition:background .2s;white-space:nowrap}
+.btn-nav:hover{background:var(--burg2)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0}
+.hamburger span{width:22px;height:1.5px;background:var(--charcoal);display:block;transition:transform .3s,opacity .3s}
+
+/* ─── MOBILE NAV ─── */
+.mobile-nav{display:none;position:fixed;inset:0;z-index:400;background:var(--cream);padding:28px 28px 40px;flex-direction:column}
+.mobile-nav.open{display:flex}
+.mobile-nav-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px}
+.mobile-nav-header img{height:44px}
+.mobile-close{background:none;border:none;cursor:pointer;color:var(--charcoal)}
+.mobile-close svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round}
+.mobile-nav-links{list-style:none;display:flex;flex-direction:column;gap:4px}
+.mobile-nav-links a{display:block;font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;color:var(--charcoal);text-decoration:none;line-height:1.2;padding:8px 0;border-bottom:1px solid var(--border2);transition:color .2s}
+.mobile-nav-links a:hover{color:var(--burg)}
+.mobile-nav-bottom{margin-top:auto;display:flex;flex-direction:column;gap:14px}
+.mobile-nav-bottom a.btn-nav{text-align:center;padding:14px}
+
+/* ─── HERO ─── */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 68px);background:var(--cream)}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:80px 64px 80px 80px;position:relative}
+.hero-owned-badge{display:inline-flex;align-items:center;gap:8px;background:var(--burg-light);border:1px solid rgba(122,28,40,0.2);border-radius:2px;padding:6px 14px;margin-bottom:36px;width:fit-content}
+.hero-owned-badge span{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--burg)}
+.hero-owned-badge svg{width:10px;height:10px;fill:var(--burg)}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,6vw,88px);font-weight:600;line-height:1.0;color:var(--charcoal);margin-bottom:28px;letter-spacing:-.01em}
+.hero-h1 em{font-style:italic;color:var(--burg)}
+.hero-sub{font-size:15px;font-weight:400;color:var(--muted);line-height:1.8;max-width:440px;margin-bottom:44px}
+.hero-ctas{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--burg);color:var(--white);text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:14px 32px;border-radius:2px;transition:background .2s,transform .2s}
+.btn-primary:hover{background:var(--burg2);transform:translateY(-1px)}
+.btn-primary svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.btn-ghost-dark{display:inline-flex;align-items:center;gap:8px;color:var(--charcoal);text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.04em;transition:color .2s}
+.btn-ghost-dark:hover{color:var(--burg)}
+.btn-ghost-dark svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero-stat-row{display:flex;gap:40px;margin-top:64px;padding-top:40px;border-top:1px solid var(--border)}
+.hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--charcoal);line-height:1}
+.hero-stat-label{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-right-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--cream) 0%,transparent 8%)}
+.hero-tag{position:absolute;bottom:40px;left:40px;background:rgba(26,23,20,0.85);backdrop-filter:blur(8px);color:var(--white);padding:16px 20px;border-radius:2px;border-left:3px solid var(--gold)}
+.hero-tag-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.hero-tag-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;line-height:1.3}
+
+/* ─── MARQUEE ─── */
+.marquee-wrap{background:var(--burg);padding:14px 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:0;animation:marquee 24s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-item{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.9);padding:0 32px}
+.marquee-sep{color:var(--gold2);font-size:14px;line-height:1}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── SECTION COMMON ─── */
+.section-inner{max-width:1360px;margin:0 auto;padding:0 40px}
+.section-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--burg);margin-bottom:16px}
+.section-eyebrow::before{content:'';width:28px;height:1px;background:var(--burg)}
+.section-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,56px);font-weight:600;color:var(--charcoal);line-height:1.1;letter-spacing:-.01em}
+.section-h2 em{font-style:italic;color:var(--burg)}
+
+/* ─── BROWSE / SHOP ─── */
+#cellar{padding:100px 0 120px}
+.cellar-header{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:48px;flex-wrap:wrap}
+.cellar-header-left{}
+.cellar-header-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.view-all-link{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--burg);text-decoration:none;letter-spacing:.03em;transition:gap .2s}
+.view-all-link:hover{gap:12px}
+.view-all-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:48px}
+.filter-pill{background:none;border:1.5px solid var(--border);border-radius:2px;padding:8px 20px;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--muted);cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;text-transform:uppercase}
+.filter-pill:hover{border-color:var(--burg);color:var(--burg)}
+.filter-pill.active{background:var(--burg);border-color:var(--burg);color:var(--white)}
+
+.wine-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+
+.wine-card{background:var(--white);border:1px solid var(--border2);border-radius:2px;overflow:hidden;cursor:pointer;transition:transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.wine-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(26,23,20,0.1)}
+.wine-card.hidden{display:none}
+.wine-card-img{position:relative;height:240px;overflow:hidden;background:var(--cream2)}
+.wine-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.wine-card:hover .wine-card-img img{transform:scale(1.04)}
+.wine-type-badge{position:absolute;top:14px;left:14px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:2px;backdrop-filter:blur(8px)}
+.badge-red{background:rgba(122,28,40,0.88);color:#fff}
+.badge-white{background:rgba(255,252,240,0.92);color:var(--charcoal)}
+.badge-rose{background:rgba(220,130,130,0.88);color:#fff}
+.badge-natural{background:rgba(80,100,60,0.88);color:#fff}
+.badge-sparkling{background:rgba(50,50,80,0.88);color:#fff}
+.wine-card-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.wine-card-region{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.wine-card-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--charcoal);line-height:1.2;margin-bottom:8px}
+.wine-card-note{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:16px;flex:1}
+.wine-card-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border2);padding-top:14px;margin-top:auto}
+.wine-card-price{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--charcoal)}
+.wine-card-price sup{font-size:14px;font-weight:500}
+.btn-shop-wine{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--burg);display:flex;align-items:center;gap:5px;transition:gap .2s}
+.btn-shop-wine:hover{gap:10px}
+.btn-shop-wine svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+.cellar-cta-wrap{text-align:center;margin-top:60px}
+
+/* ─── PM EXCLUSIVE ─── */
+#exclusive{padding:120px 0;background:var(--charcoal);position:relative;overflow:hidden}
+#exclusive::before{content:'PM';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:400px;font-weight:700;color:rgba(255,255,255,0.02);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.05em;white-space:nowrap}
+.excl-header{text-align:center;margin-bottom:72px}
+.excl-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.excl-eyebrow::before,.excl-eyebrow::after{content:'';width:24px;height:1px;background:var(--gold)}
+.excl-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,72px);font-weight:600;color:var(--white);line-height:1.05;letter-spacing:-.01em}
+.excl-h2 em{font-style:italic;color:var(--gold2)}
+.excl-sub{font-size:15px;color:rgba(255,255,255,0.5);max-width:520px;margin:20px auto 0;line-height:1.8}
+
+.excl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.excl-card{position:relative;overflow:hidden;background:var(--cream2);aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:flex-end}
+.excl-card-img{position:absolute;inset:0}
+.excl-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.excl-card:hover .excl-card-img img{transform:scale(1.06)}
+.excl-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,8,4,0.92) 0%,rgba(15,8,4,0.4) 50%,rgba(15,8,4,0.1) 100%)}
+.excl-card-body{position:relative;z-index:2;padding:36px 32px}
+.excl-card-tag{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.excl-card-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--white);line-height:1.15;margin-bottom:10px}
+.excl-card-desc{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7;margin-bottom:22px}
+.excl-card-footer{display:flex;align-items:center;justify-content:space-between}
+.excl-card-price{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:var(--white)}
+.btn-excl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:9px 20px;border-radius:2px;text-decoration:none;transition:background .2s,color .2s}
+.btn-excl:hover{background:var(--gold);color:var(--charcoal)}
+
+/* ─── STORY ─── */
+#story{padding:120px 0;background:var(--cream)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story-left{}
+.story-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3vw,42px);font-weight:400;font-style:italic;color:var(--charcoal);line-height:1.45;margin-bottom:40px;padding-left:28px;border-left:3px solid var(--burg)}
+.story-body{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:24px}
+.story-tag{display:inline-flex;align-items:center;gap:10px;margin-top:36px}
+.story-tag-dot{width:8px;height:8px;border-radius:50%;background:var(--burg);flex-shrink:0}
+.story-tag-text{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--burg)}
+
+.story-right{position:relative}
+.story-img-main{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px;display:block}
+.story-img-accent{position:absolute;bottom:-32px;left:-48px;width:55%;aspect-ratio:1;object-fit:cover;border-radius:2px;border:6px solid var(--cream);box-shadow:0 20px 60px rgba(26,23,20,0.15)}
+
+/* ─── PILLARS ─── */
+#pillars{padding:100px 0;background:var(--cream2)}
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px}
+.pillar{background:var(--cream);padding:52px 44px;position:relative;overflow:hidden}
+.pillar::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--burg);transition:height .4s}
+.pillar:hover::before{height:100%}
+.pillar-num{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:600;color:var(--border);line-height:1;margin-bottom:28px;transition:color .3s}
+.pillar:hover .pillar-num{color:var(--burg-light)}
+.pillar-icon{width:44px;height:44px;background:var(--burg-light);border-radius:2px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.pillar-icon svg{width:22px;height:22px;stroke:var(--burg);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pillar-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--charcoal);margin-bottom:14px}
+.pillar-text{font-size:14px;color:var(--muted);line-height:1.8}
+
+/* ─── EVENTS ─── */
+#events{padding:100px 0;background:var(--cream)}
+.events-inner{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.event-promo{position:relative;overflow:hidden;background:var(--burg);padding:64px 56px;display:flex;flex-direction:column;justify-content:space-between;min-height:400px}
+.event-promo::after{content:'';position:absolute;bottom:-80px;right:-80px;width:280px;height:280px;border-radius:50%;border:1px solid rgba(255,255,255,0.08);pointer-events:none}
+.event-promo::before{content:'';position:absolute;bottom:20px;right:20px;width:160px;height:160px;border-radius:50%;border:1px solid rgba(255,255,255,0.05);pointer-events:none}
+.event-promo-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:20px}
+.event-promo-h3{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:var(--white);line-height:1.1;margin-bottom:16px}
+.event-promo-sub{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:40px}
+.btn-event{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--burg);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:13px 28px;border-radius:2px;text-decoration:none;transition:background .2s}
+.btn-event:hover{background:var(--cream2)}
+.btn-event svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+.events-list{display:flex;flex-direction:column;gap:2px}
+.event-item{background:var(--cream2);padding:36px 40px;display:flex;gap:28px;align-items:flex-start;transition:background .2s;border-left:3px solid transparent;cursor:default}
+.event-item:hover{background:var(--white);border-left-color:var(--burg)}
+.event-date-block{flex-shrink:0;text-align:center;width:52px}
+.event-date-month{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--burg)}
+.event-date-day{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--charcoal);line-height:1}
+.event-info{}
+.event-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--charcoal);margin-bottom:6px}
+.event-meta{font-size:12px;color:var(--muted);line-height:1.6}
+.event-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:2px;margin-top:8px}
+.badge-soon{background:var(--gold-light);color:var(--gold)}
+.badge-free{background:var(--burg-light);color:var(--burg)}
+
+/* ─── NEWSLETTER ─── */
+#newsletter{padding:100px 0;background:var(--cream2)}
+.newsletter-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.newsletter-left .section-h2{margin-bottom:16px}
+.newsletter-left p{font-size:15px;color:var(--muted);line-height:1.8;margin-top:16px;max-width:420px}
+.newsletter-form{display:flex;gap:0;border:1.5px solid var(--border);border-radius:2px;overflow:hidden;background:var(--white)}
+.newsletter-form input{flex:1;padding:16px 20px;border:none;outline:none;font-size:14px;font-family:'Inter',sans-serif;color:var(--charcoal);background:transparent}
+.newsletter-form input::placeholder{color:var(--muted)}
+.newsletter-form button{background:var(--burg);color:var(--white);border:none;padding:16px 28px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s;white-space:nowrap}
+.newsletter-form button:hover{background:var(--burg2)}
+.newsletter-fine{font-size:12px;color:var(--muted);margin-top:12px}
+.newsletter-insta{display:flex;align-items:center;gap:16px;padding:28px 32px;background:var(--white);border:1px solid var(--border2);border-radius:2px;text-decoration:none;transition:border-color .2s,transform .2s;margin-top:24px}
+.newsletter-insta:hover{border-color:var(--burg);transform:translateY(-2px)}
+.newsletter-insta-icon{width:48px;height:48px;background:var(--burg);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.newsletter-insta-icon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.newsletter-insta-text{}
+.newsletter-insta-handle{font-size:16px;font-weight:700;color:var(--charcoal);letter-spacing:.02em}
+.newsletter-insta-sub{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* ─── FOOTER ─── */
+footer{background:var(--charcoal);padding:72px 0 40px}
+.footer-inner{max-width:1360px;margin:0 auto;padding:0 40px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;margin-bottom:64px}
+.footer-brand img{height:52px;width:auto;filter:brightness(0) invert(1);opacity:.85;margin-bottom:20px}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.8;max-width:240px}
+.footer-col-title{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:32px;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.3)}
+.footer-copy a{color:var(--gold);text-decoration:none}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:36px;height:36px;border:1px solid rgba(255,255,255,0.1);border-radius:2px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.45);transition:all .2s;text-decoration:none}
+.footer-social a:hover{border-color:var(--gold);color:var(--gold)}
+.footer-social svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1100px){
+  .wine-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr;gap:40px}
+}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:64px 32px;order:2}
+  .hero-right{height:400px;order:1}
+  .hero-stat-row{gap:28px}
+  .story-grid{grid-template-columns:1fr;gap:48px}
+  .story-img-accent{left:-24px;bottom:-24px}
+  .newsletter-grid{grid-template-columns:1fr;gap:40px}
+  .events-inner{grid-template-columns:1fr}
+  .excl-grid{grid-template-columns:1fr 1fr}
+  .pillars-grid{grid-template-columns:1fr}
+  .pillars-grid .pillar{padding:40px 32px}
+  .wine-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+  .nav-right .btn-nav{display:none}
+  .hamburger{display:flex}
+  .nav-insta{display:none}
+}
+@media(max-width:600px){
+  .section-inner{padding:0 20px}
+  .hero-left{padding:48px 20px}
+  .hero-stat-row{gap:20px}
+  .hero-stat-num{font-size:28px}
+  .wine-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .wine-card-img{height:180px}
+  .excl-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:32px}
+  .newsletter-form{flex-direction:column}
+  .newsletter-form input{border-bottom:1.5px solid var(--border)}
+  .newsletter-form button{padding:14px}
+  #cellar,.pillars-wrap,#story,#newsletter,#events{padding:72px 0}
+  .cellar-header{flex-direction:column;align-items:flex-start}
+  .nav-inner{padding:0 20px}
+  .footer-inner{padding:0 20px}
+  footer{padding:56px 0 32px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="./logo.png" alt="PM Wine Lounge">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#cellar">Browse Wines</a></li>
+      <li><a href="#exclusive">PM Collection</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#events">Events</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://instagram.com/pmwineco" target="_blank" class="nav-insta">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @pmwineco
+      </a>
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="btn-nav">Shop Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <img src="./logo.png" alt="PM Wine Lounge">
+    <button class="mobile-close" id="mobileClose">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <ul class="mobile-nav-links">
+    <li><a href="#cellar" onclick="document.getElementById('mobileNav').classList.remove('open')">Browse Wines</a></li>
+    <li><a href="#exclusive" onclick="document.getElementById('mobileNav').classList.remove('open')">PM Collection</a></li>
+    <li><a href="#story" onclick="document.getElementById('mobileNav').classList.remove('open')">Our Story</a></li>
+    <li><a href="#events" onclick="document.getElementById('mobileNav').classList.remove('open')">Events</a></li>
+  </ul>
+  <div class="mobile-nav-bottom">
+    <a href="https://www.pmwineco.com/shop-all" target="_blank" class="btn-nav">Shop All Wines</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-owned-badge">
+      <svg viewBox="0 0 10 10" width="10" height="10"><circle cx="5" cy="5" r="5"/></svg>
+      <span>Black-Owned & Operated</span>
+    </div>
+    <h1 class="hero-h1">Wine Worth<br><em>Discovering.</em></h1>
+    <p class="hero-sub">Clean. Curated. For the culture. PM Wine Lounge brings you exceptional bottles from around the world — plus our own exclusive collection, made for a new generation of wine lovers.</p>
+    <div class="hero-ctas">
+      <a href="#cellar" class="btn-primary">
+        Browse the Cellar
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#exclusive" class="btn-ghost-dark">
+        PM Collection
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="hero-stat-row">
+      <div>
+        <div class="hero-stat-num">50+</div>
+        <div class="hero-stat-label">Curated Wines</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">12+</div>
+        <div class="hero-stat-label">Regions</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Minimal Intervention</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=1000&q=85&fit=crop&crop=center" alt="Wine experience">
+    <div class="hero-right-overlay"></div>
+    <div class="hero-tag">
+      <div class="hero-tag-label">Featured Now</div>
+      <div class="hero-tag-text">The PM Reserve<br>Red Blend</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Curated Selection</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Minimal Intervention</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Black-Owned</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">For All Palates</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">New Generation</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Clean Wines</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Global Varietals</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">PM Wine Lounge</span><span class="marquee-sep">·</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Curated Selection</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Minimal Intervention</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Black-Owned</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">For All Palates</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">New Generation</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Clean Wines</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Global Varietals</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">PM Wine Lounge</span><span class="marquee-sep">·</span>
+  </div>
+</div>
+
+<!-- BROWSE THE CELLAR -->
+<section id="cellar">
+  <div class="section-inner">
+    <div class="cellar-header">
+      <div class="cellar-header-left">
+        <div class="section-eyebrow">Browse the Cellar</div>
+        <h2 class="section-h2">Find Your <em>Next Bottle</em></h2>
+      </div>
+      <div class="cellar-header-right">
+        <a href="https://www.pmwineco.com/shop-all" target="_blank" class="view-all-link">
+          View full shop
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-pill active" onclick="filterWines('all',this)">All Wines</button>
+      <button class="filter-pill" onclick="filterWines('red',this)">Red</button>
+      <button class="filter-pill" onclick="filterWines('white',this)">White</button>
+      <button class="filter-pill" onclick="filterWines('rose',this)">Rosé</button>
+      <button class="filter-pill" onclick="filterWines('natural',this)">Natural</button>
+      <button class="filter-pill" onclick="filterWines('sparkling',this)">Sparkling</button>
+    </div>
+
+    <div class="wine-grid" id="wineGrid">
+
+      <!-- RED -->
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="red">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=500&h=400&q=80&fit=crop" alt="Borsao Garnacha">
+          <span class="wine-type-badge badge-red">Red</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Aragon, Spain · 2022</div>
+          <div class="wine-card-name">Borsao Garnacha</div>
+          <p class="wine-card-note">Bold cherry and raspberry fruit with a smooth, velvety finish. A perfect entry point into Spanish reds.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>18</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="red">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1474722883778-792e7fb302b3?w=500&h=400&q=80&fit=crop" alt="Zuccardi Malbec">
+          <span class="wine-type-badge badge-red">Red</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Mendoza, Argentina · 2021</div>
+          <div class="wine-card-name">Zuccardi Valle Malbec</div>
+          <p class="wine-card-note">Full-bodied with dark plum, violet, and a hint of cocoa. One of Argentina's finest expressions.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>28</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="red">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500&h=400&q=80&fit=crop" alt="Cannonball Cabernet">
+          <span class="wine-type-badge badge-red">Red</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Sonoma County, CA · 2022</div>
+          <div class="wine-card-name">Cannonball Cabernet</div>
+          <p class="wine-card-note">Rich blackberry, cassis, and toasted oak. Big, bold, and perfectly balanced for steak nights.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>22</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- WHITE -->
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="white">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1560508180-03f285f67ded?w=500&h=400&q=80&fit=crop" alt="Santa Margherita Pinot Grigio">
+          <span class="wine-type-badge badge-white">White</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Alto Adige, Italy · 2023</div>
+          <div class="wine-card-name">Santa Margherita Pinot Grigio</div>
+          <p class="wine-card-note">Crisp, refreshing, and light golden in color. The definitive gateway wine — effortlessly elegant.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>22</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="white">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1535141192574-5f33c4c43cef?w=500&h=400&q=80&fit=crop" alt="Kim Crawford Sauvignon Blanc">
+          <span class="wine-type-badge badge-white">White</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Marlborough, New Zealand · 2023</div>
+          <div class="wine-card-name">Kim Crawford Sauvignon Blanc</div>
+          <p class="wine-card-note">Vibrant citrus, passionfruit, and fresh cut grass. A crowd-pleaser that punches above its price.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>18</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="white">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1568213214202-e59b4961a5b2?w=500&h=400&q=80&fit=crop" alt="Dönnhoff Riesling">
+          <span class="wine-type-badge badge-white">White</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Nahe, Germany · 2022</div>
+          <div class="wine-card-name">Dönnhoff Riesling</div>
+          <p class="wine-card-note">Off-dry with gorgeous minerality, apricot, and peach. Germany's most expressive Riesling house.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>26</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ROSÉ -->
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="rose">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=400&q=80&fit=crop" alt="Whispering Angel Rosé">
+          <span class="wine-type-badge badge-rose">Rosé</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Provence, France · 2023</div>
+          <div class="wine-card-name">Whispering Angel Rosé</div>
+          <p class="wine-card-note">The gold standard of Provençal rosé. Pale blush, silky peach and cream, impossibly smooth finish.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>34</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="rose">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1491553895291-0be8496d674b?w=500&h=400&q=80&fit=crop" alt="La Vieille Ferme Rosé">
+          <span class="wine-type-badge badge-rose">Rosé</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Luberon, France · 2023</div>
+          <div class="wine-card-name">La Vieille Ferme Rosé</div>
+          <p class="wine-card-note">Fresh strawberry and floral notes from the south of France. Everyday luxury at an accessible price.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>14</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- NATURAL -->
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="natural">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=500&h=400&q=80&fit=crop" alt="Lioco Indica Red">
+          <span class="wine-type-badge badge-natural">Natural</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Mendocino, CA · 2022</div>
+          <div class="wine-card-name">Lioco Indica Red</div>
+          <p class="wine-card-note">Minimal intervention, maximum soul. Wild-fermented, unfiltered, and pulsing with life. A must.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>32</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="natural">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=500&h=400&q=80&fit=crop" alt="Domaine Fond Croze">
+          <span class="wine-type-badge badge-natural">Natural</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Rhône Valley, France · 2022</div>
+          <div class="wine-card-name">Domaine Fond Croze</div>
+          <p class="wine-card-note">Biodynamic farming, hand-harvested, unfiltered. Earthy, complex, and beautifully alive in the glass.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>28</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- SPARKLING -->
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="sparkling">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?w=500&h=400&q=80&fit=crop" alt="Mionetto Prosecco">
+          <span class="wine-type-badge badge-sparkling">Sparkling</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Veneto, Italy · NV</div>
+          <div class="wine-card-name">Mionetto Prosecco DOC</div>
+          <p class="wine-card-note">Light, effervescent, and perfectly dry. Celebrate everything — or nothing. Either works just fine.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>18</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="wine-card" data-type="sparkling">
+        <div class="wine-card-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&q=80&fit=crop" alt="Segura Viudas Cava">
+          <span class="wine-type-badge badge-sparkling">Sparkling</span>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-region">Penedès, Spain · NV</div>
+          <div class="wine-card-name">Segura Viudas Cava Brut</div>
+          <p class="wine-card-note">Crisp green apple, toasted almond, and fine persistent bubbles. Spain's answer to Champagne.</p>
+          <div class="wine-card-footer">
+            <div class="wine-card-price"><sup>$</sup>14</div>
+            <span class="btn-shop-wine">Shop <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="cellar-cta-wrap">
+      <a href="https://www.pmwineco.com/shop-all" target="_blank" class="btn-primary">
+        View All Wines
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PM EXCLUSIVE COLLECTION -->
+<section id="exclusive">
+  <div class="section-inner">
+    <div class="excl-header">
+      <div class="excl-eyebrow">The PM Collection</div>
+      <h2 class="excl-h2">Our <em>Exclusive</em> Label</h2>
+      <p class="excl-sub">Wines crafted under the PM Wine Lounge name — made for the culture, built for the moment, and unlike anything you've tasted before.</p>
+    </div>
+    <div class="excl-grid">
+
+      <div class="excl-card">
+        <div class="excl-card-img">
+          <img src="https://images.unsplash.com/photo-1506377711776-dbdc2f3c20d9?w=700&h=900&q=85&fit=crop&crop=center" alt="PM Reserve Red Blend">
+        </div>
+        <div class="excl-card-overlay"></div>
+        <div class="excl-card-body">
+          <div class="excl-card-tag">PM Collection · Red Blend</div>
+          <div class="excl-card-name">PM Reserve<br>Red Blend</div>
+          <p class="excl-card-desc">Our signature blend — crafted for the culture and aged for the moment. Dark fruit, warm spice, and a finish that lingers.</p>
+          <div class="excl-card-footer">
+            <div class="excl-card-price">$38</div>
+            <a href="https://www.pmwineco.com/shop-all" target="_blank" class="btn-excl">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="excl-card">
+        <div class="excl-card-img">
+          <img src="https://images.unsplash.com/photo-1470158499416-75be9aa0c4db?w=700&h=900&q=85&fit=crop&crop=center" alt="PM Blanc">
+        </div>
+        <div class="excl-card-overlay"></div>
+        <div class="excl-card-body">
+          <div class="excl-card-tag">PM Collection · White</div>
+          <div class="excl-card-name">PM Blanc</div>
+          <p class="excl-card-desc">Clean, bright, and unapologetically refreshing. Stone fruit, citrus zest, and a long crisp finish. Built for warm nights and good company.</p>
+          <div class="excl-card-footer">
+            <div class="excl-card-price">$32</div>
+            <a href="https://www.pmwineco.com/shop-all" target="_blank" class="btn-excl">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="excl-card">
+        <div class="excl-card-img">
+          <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=700&h=900&q=85&fit=crop&crop=center" alt="PM Rosé">
+        </div>
+        <div class="excl-card-overlay"></div>
+        <div class="excl-card-body">
+          <div class="excl-card-tag">PM Collection · Rosé — Coming Soon</div>
+          <div class="excl-card-name">PM Rosé<br>Estate</div>
+          <p class="excl-card-desc">Pale. Precise. Made for the ones who know. Our upcoming rosé is everything you didn't know you needed — dropping soon.</p>
+          <div class="excl-card-footer">
+            <div class="excl-card-price">TBA</div>
+            <a href="#newsletter" class="btn-excl">Notify Me</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section id="story">
+  <div class="section-inner">
+    <div class="story-grid">
+      <div class="story-left">
+        <div class="section-eyebrow">Our Story</div>
+        <blockquote class="story-quote">"Wine was never just for one kind of person. It was always for everyone — we're just here to prove it."</blockquote>
+        <p class="story-body">PM Wine Lounge is a Black-owned and operated wine business with a mission as simple as it is powerful: introduce the versatile world of wines to a new generation of enthusiasts.</p>
+        <p class="story-body">With a focus on young adults, we curate a diverse array of wines from different regions and producers — inviting our audience to explore, expand their palates, and find bottles they truly love. Not because they're supposed to, but because they want to.</p>
+        <p class="story-body">We're especially passionate about clean, minimal-intervention wines — bottles that let the land speak, with nothing hidden and nothing added. That's what we drink. That's what we sell. And that's what we believe wine should be.</p>
+        <div class="story-tag">
+          <div class="story-tag-dot"></div>
+          <div class="story-tag-text">Chicago, IL — Est. 2024</div>
+        </div>
+      </div>
+      <div class="story-right">
+        <img class="story-img-main" src="https://images.unsplash.com/photo-1516594798947-e65505dbb29d?w=700&h=900&q=80&fit=crop" alt="PM Wine Lounge">
+        <img class="story-img-accent" src="https://www.pmwineco.com/uploads/b/3c37a8e74dad9c0a17a4addab33914f5d3f0f56c6b5027840326f42cccddddcc/2024-05-21_18-20-42_1716340861.png" alt="PM branded wine glass" onerror="this.src='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=400&q=80&fit=crop'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section id="pillars" style="padding:100px 0">
+  <div class="section-inner">
+    <div class="section-eyebrow">Why PM Wine</div>
+    <h2 class="section-h2">The <em>PM Difference</em></h2>
+    <div class="pillars-grid" style="margin-top:64px">
+
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="pillar-title">Global Curation</div>
+        <p class="pillar-text">We source from 12+ wine regions — from Mendoza to Provence, Nahe to Napa. Every bottle is hand-picked by us, not an algorithm.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="pillar-title">Clean & Honest</div>
+        <p class="pillar-text">Minimal intervention wines are at our core. No excessive additives, no shortcuts — just clean, honest winemaking the way it was meant to be.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="pillar-title">Education First</div>
+        <p class="pillar-text">Every bottle we carry comes with context. We want you to know what's in your glass — where it's from, how it was made, and why it matters.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="section-inner">
+    <div class="section-eyebrow" style="margin-bottom:48px">Events & Experiences</div>
+    <div class="events-inner">
+
+      <div class="event-promo">
+        <div>
+          <div class="event-promo-eyebrow">PM Wine Lounge Presents</div>
+          <h3 class="event-promo-h3">Taste the World,<br>One Glass at a Time</h3>
+          <p class="event-promo-sub">Intimate tastings, pop-up wine experiences, and curated events for the culture. Follow us to stay in the loop when new events drop.</p>
+        </div>
+        <a href="https://instagram.com/pmwineco" target="_blank" class="btn-event">
+          Follow @pmwineco
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="events-list">
+        <div class="event-item">
+          <div class="event-date-block">
+            <div class="event-date-month">TBD</div>
+            <div class="event-date-day">—</div>
+          </div>
+          <div class="event-info">
+            <div class="event-name">Natural Wine Tasting Night</div>
+            <p class="event-meta">A guided flight through our best minimal-intervention picks. Perfect for newcomers and seasoned drinkers alike.</p>
+            <span class="event-badge badge-soon">Coming Soon</span>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-date-block">
+            <div class="event-date-month">TBD</div>
+            <div class="event-date-day">—</div>
+          </div>
+          <div class="event-info">
+            <div class="event-name">Rosé All Day Pop-Up</div>
+            <p class="event-meta">Summer vibes, four rosés, good music. An outdoor tasting event for when the weather hits just right.</p>
+            <span class="event-badge badge-soon">Coming Soon</span>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-date-block">
+            <div class="event-date-month">TBD</div>
+            <div class="event-date-day">—</div>
+          </div>
+          <div class="event-info">
+            <div class="event-name">Red Wine &amp; R&B</div>
+            <p class="event-meta">Three bold reds. Live music. Good company. An evening for the culture, designed by PM Wine Lounge.</p>
+            <span class="event-badge badge-free">Free Entry</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="section-inner">
+    <div class="newsletter-grid">
+      <div class="newsletter-left">
+        <div class="section-eyebrow">Stay in the Loop</div>
+        <h2 class="section-h2">New Drops.<br><em>No Spam.</em></h2>
+        <p>Be the first to know when new wines land, PM Collection bottles drop, and events go live. We keep it real in your inbox.</p>
+      </div>
+      <div class="newsletter-right">
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" id="emailInput">
+          <button onclick="handleSubscribe()">Subscribe</button>
+        </div>
+        <p class="newsletter-fine">No spam, ever. Unsubscribe any time.</p>
+        <a href="https://instagram.com/pmwineco" target="_blank" class="newsletter-insta">
+          <div class="newsletter-insta-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div class="newsletter-insta-text">
+            <div class="newsletter-insta-handle">@pmwineco</div>
+            <div class="newsletter-insta-sub">Follow us on Instagram for tastings, drops & more</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="./logo.png" alt="PM Wine Lounge">
+        <p>Clean & exceptional wine for all palates. Black-owned and operated, built for a new generation of wine lovers.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="https://www.pmwineco.com/shop-all" target="_blank">All Wines</a></li>
+          <li><a href="#cellar">Red Wines</a></li>
+          <li><a href="#cellar">White Wines</a></li>
+          <li><a href="#cellar">Rosé</a></li>
+          <li><a href="#exclusive">PM Collection</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="https://instagram.com/pmwineco" target="_blank">Instagram</a></li>
+          <li><a href="mailto:hello@pmwineco.com">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+        </ul>
+        <div style="margin-top:28px;font-size:12px;color:rgba(255,255,255,0.25);line-height:1.7">You must be 21+<br>to purchase alcohol.</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 PM Wine Lounge, LLC. All rights reserved. Made with 🍷 by <a href="https://c4services.com">C4 Mgmt</a></div>
+      <div class="footer-social">
+        <a href="https://instagram.com/pmwineco" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20)
+})
+
+// Mobile nav
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.add('open')
+})
+document.getElementById('mobileClose').addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.remove('open')
+})
+
+// Wine filter
+function filterWines(type, btn) {
+  document.querySelectorAll('.wine-card').forEach(card => {
+    card.classList.toggle('hidden', type !== 'all' && card.dataset.type !== type)
+  })
+  document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'))
+  if (btn) btn.classList.add('active')
+}
+
+// Newsletter
+function handleSubscribe() {
+  const input = document.getElementById('emailInput')
+  const val = input.value.trim()
+  if (!val || !val.includes('@')) {
+    input.style.borderColor = '#7A1C28'
+    input.focus()
+    return
+  }
+  const btn = input.nextElementSibling
+  btn.textContent = '✓ You\'re in!'
+  btn.style.background = '#2d6a4f'
+  input.value = ''
+  input.disabled = true
+  btn.disabled = true
+}
+</script>
+</body>
+</html>
