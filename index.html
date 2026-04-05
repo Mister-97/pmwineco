@@ -285,8 +285,11 @@ footer{background:var(--charcoal);padding:72px 0 40px}
   .wine-grid{grid-template-columns:repeat(2,1fr)}
   .nav-links{display:none}
   .nav-right .btn-nav{display:none}
-  .hamburger{display:flex}
-  .nav-insta{display:none}
+  .hamburger{display:flex;order:3}
+  .nav-insta{display:flex;order:1}
+  .nav-inner{justify-content:space-between;position:relative}
+  .nav-logo{position:absolute;left:50%;transform:translateX(-50%);order:2}
+  .hero-right-overlay{display:none}
 }
 @media(max-width:600px){
   .section-inner{padding:0 20px}
@@ -323,7 +326,7 @@ footer{background:var(--charcoal);padding:72px 0 40px}
       <li><a href="#events">Events</a></li>
     </ul>
     <div class="nav-right">
-      <a href="https://instagram.com/pmwineco" target="_blank" class="nav-insta">
+      <a href="https://www.instagram.com/pmwineco/" target="_blank" class="nav-insta">
         <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         @pmwineco
       </a>
@@ -695,7 +698,7 @@ footer{background:var(--charcoal);padding:72px 0 40px}
           <h3 class="event-promo-h3">Taste the World,<br>One Glass at a Time</h3>
           <p class="event-promo-sub">Intimate tastings, pop-up wine experiences, and curated events for the culture. Follow us to stay in the loop when new events drop.</p>
         </div>
-        <a href="https://instagram.com/pmwineco" target="_blank" class="btn-event">
+        <a href="https://www.instagram.com/pmwineco/" target="_blank" class="btn-event">
           Follow @pmwineco
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -756,7 +759,7 @@ footer{background:var(--charcoal);padding:72px 0 40px}
           <button onclick="handleSubscribe()">Subscribe</button>
         </div>
         <p class="newsletter-fine">No spam, ever. Unsubscribe any time.</p>
-        <a href="https://instagram.com/pmwineco" target="_blank" class="newsletter-insta">
+        <a href="https://www.instagram.com/pmwineco/" target="_blank" class="newsletter-insta">
           <div class="newsletter-insta-icon">
             <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </div>
@@ -793,7 +796,7 @@ footer{background:var(--charcoal);padding:72px 0 40px}
         <ul class="footer-links">
           <li><a href="#story">Our Story</a></li>
           <li><a href="#events">Events</a></li>
-          <li><a href="https://instagram.com/pmwineco" target="_blank">Instagram</a></li>
+          <li><a href="https://www.instagram.com/pmwineco/" target="_blank">Instagram</a></li>
           <li><a href="mailto:hello@pmwineco.com">Contact</a></li>
         </ul>
       </div>
@@ -810,7 +813,7 @@ footer{background:var(--charcoal);padding:72px 0 40px}
     <div class="footer-bottom">
       <div class="footer-copy">© 2024 PM Wine Lounge, LLC. All rights reserved. Made with 🍷 by <a href="https://c4services.com">C4 Mgmt</a></div>
       <div class="footer-social">
-        <a href="https://instagram.com/pmwineco" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/pmwineco/" target="_blank" aria-label="Instagram">
           <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </a>
       </div>
